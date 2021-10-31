@@ -1,0 +1,27 @@
+{
+  "name": "gaming-form-page",
+  "version": "1.0.0",
+  "description": "A gaming form page that allows a user to create, update and delete posts while adding comments.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheWizard421/Gaming_Form.git"
+  },
+  "author": "Iain Milliken, Kristin Foreyt, Anthony (Chris)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheWizard421/Gaming_Form/issues"
+  },
+  "homepage": "https://github.com/TheWizard421/Gaming_Form#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.2",
+    "sequelize": "^6.8.0"
+  }
+}
