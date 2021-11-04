@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post } = require("../models");
+const { User, Post } = require("../../models");
 
 // get all users
 router.get("/", (req, res) => {
@@ -22,7 +22,7 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ["id", "title", "post_url", "created_at"],
+        attributes: ["id", "title", "post_body", "created_at"],
       },
     ],
   })
@@ -53,6 +53,7 @@ router.post("/", (req, res) => {
     });
 });
 
+//LOG IN
 router.post("/login", (req, res) => {
   // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
@@ -76,46 +77,18 @@ router.post("/login", (req, res) => {
   });
 });
 
-router.put("/:id", (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+// //LOG OUT
+// router.post('/logout', (req, res) => {
+//   if (req.session.loggedIn) {
+//     req.session.destroy(() => {
+//       res.status(204).end();
+//     });
+//   }
+//   else {
+//     res.status(404).end();
+//   }
+// });
 
-  // pass in req.body instead to only update what's passed through
-  User.update(req.body, {
-    individualHooks: true,
-    where: {
-      id: req.params.id,
-    },
-  })
-    .then((dbUserData) => {
-      if (!dbUserData[0]) {
-        res.status(404).json({ message: "No user found with this id" });
-        return;
-      }
-      res.json(dbUserData);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
 
-router.delete("/:id", (req, res) => {
-  User.destroy({
-    where: {
-      id: req.params.id,
-    },
-  })
-    .then((dbUserData) => {
-      if (!dbUserData) {
-        res.status(404).json({ message: "No user found with this id" });
-        return;
-      }
-      res.json(dbUserData);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
 
 module.exports = router;

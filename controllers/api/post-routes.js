@@ -26,7 +26,6 @@ router.get('/', (req, res) => {
         ]
     })
     .then(dbPostData => res.json(dbPostData))
-    console.log(dbPostData)
     .catch(err => {
         console.log(err);
         res.status(500).json(err);

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Comment } = require('../../models');
 
 
-//ADD COMMENTS TO POST
+// GET ALL COMMENTS
 router.get('/', (req, res) => {
     Comment.findAll()
     .then(dbCommentData => res.json(dbCommentData))
@@ -11,7 +11,9 @@ router.get('/', (req, res) => {
     res.status(500).json(err);
     })
 });
-//EDIT COMMENTS TO POST
+
+
+// CREATE A COMMENT
 router.post('/', (req, res) => {
     Comment.create({
         comment_text: req.body.comment_text,
@@ -24,6 +26,8 @@ router.post('/', (req, res) => {
           res.status(400).json(err);
         });
     });
+
+    
 //DELETE COMMENTS TO POST
 router.delete('/:id', (req, res) => {
     Comment.destroy ({

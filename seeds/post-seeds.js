@@ -33,12 +33,12 @@ const postdata = [
       },
       {
         title: 'In hac habitasse platea dictumst.',
-        post_body: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure magni enim cum non labore laborum veniam facere incidunt. Facere quaerat nemo vel fugiat, alias iusto? Libero ullam dicta assumenda voluptas? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur odio consequuntur voluptatum architecto facere soluta quod obcaecati facilis odit! Repellat iure rem eos in dolor velit pariatur ratione ut harum!',
+        post_body: 'Lorem ipsum dolor, sit amet consectetur adipi2350723598623948724082302',
         user_id: 1
       },
       {
         title: 'Morbi non quam nec dui luctus rutrum.',
-        post_body: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure magni enim cum non labore laborum veniam facere incidunt. Facere quaerat nemo vel fugiat, alias iusto? Libero ullam dicta assumenda voluptas? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur odio consequuntur voluptatum architecto facere soluta quod obcaecati facilis odit! Repellat iure rem eos in dolor velit pariatur ratione ut harum!',
+        post_body: 'Lorem ipsum dolor, sit amet consectetur adipisicim!oiahsdg;ozhxcv;hzsdfliahsdfjkbvlkzjxcnvl;kzjx',
         user_id: 1
       },
       {
