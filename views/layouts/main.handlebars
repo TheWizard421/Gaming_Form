@@ -16,6 +16,19 @@
       <h1>
         <a href="/">Gaming Forum</a>
       </h1>
+      <nav>
+        {{#if loggedIn}}
+        <button id="logout-btn">Logout</button>
+        {{else}}
+        <form class="login-form">
+          <label for="email-login">Email:</label>
+          <input type="text" id="email-login">
+          <label for="">Password:</label>
+          <input type="text" id="password-login">
+          <button id="login-btn">Login</button>
+        </form>
+        {{/if}}
+      </nav>
     </header>
     <main>
 
@@ -26,6 +39,8 @@
     </main>
   </div>
 
+<src="../../public/javascript/login.js"></src>
+<src="../../public/javascript/logout.js"></src>
 
 </body>
 </html>
