@@ -1,4 +1,21 @@
-#login-btn {
-    border-radius: 5px; 
+* {
+  box-sizing: border-box;
 }
 
+body,
+html {
+  height: 100%;
+  padding: 0%;
+  margin: 0%;
+  font-family: sans-serif;
+  color: #333;
+}
+
+#login-btn {
+
+  border-radius: 5px;
+}
+
+form {
+  float: right;
+}
