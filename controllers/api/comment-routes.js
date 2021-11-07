@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 
 // GET ALL COMMENTS
@@ -14,7 +15,8 @@ router.get('/', (req, res) => {
 
 
 // CREATE A COMMENT
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
+    if (req.session) {
     Comment.create({
         comment_text: req.body.comment_text,
         user_id: req.body.user_id,
@@ -25,6 +27,7 @@ router.post('/', (req, res) => {
           console.log(err);
           res.status(400).json(err);
         });
+        }
     });
 
     

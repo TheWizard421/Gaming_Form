@@ -11,11 +11,22 @@ html {
   color: #333;
 }
 
-#login-btn {
-
-  border-radius: 5px;
+.title {
+  font-weight: bold;
 }
 
-form {
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav {
   float: right;
+  display: inline;
 }
+
+
+/* form {
+  float: right;
+} */

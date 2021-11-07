@@ -1,8 +1,7 @@
-const signupBtn = document.getElementById('signup-btn');
+// const signupBtn = document.getElementById('signup-btn');
 
 async function loginForm(event) {
     event.preventDefault();
-
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
 
@@ -15,7 +14,6 @@ async function loginForm(event) {
             }),
             headers: { 'Content-Type': 'application/json' }
         });
-
         if (response.ok) {
             document.location.replace('/');
         } else {
@@ -24,22 +22,18 @@ async function loginForm(event) {
     }
 }
 
-
-signupBtn.addEventListener("click", () => {
-    console.log('button clicked');
-    fetch('/', {
-        method: 'get',
-        body: JSON.stringify({
-            page: 'signup'
-        })
-    })
-})
-
-
+// signupBtn.addEventListener("click", () => {
+//     console.log('button clicked');
+//     fetch('/', {
+//         method: 'get',
+//         body: JSON.stringify({
+//             page: 'signup'
+//         })
+//     })
+// })
 
 async function signupForm(event) {
     event.preventDefault();
-  
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
@@ -54,7 +48,6 @@ async function signupForm(event) {
         }),
         headers: { 'Content-Type': 'application/json' }
       });
-  
       if (response.ok) {
         document.location.replace('/dashboard/');
       } else {
