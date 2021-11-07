@@ -6,9 +6,10 @@ async function logout() {
 
     if (response.ok) {
         document.location.replace('/');
-    } else {
+      } else {
         alert(response.statusText);
-    }
+      }
 }
+
 
 document.querySelector('#logout-btn').addEventListener('click', logout);
