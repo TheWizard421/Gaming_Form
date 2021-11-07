@@ -18,21 +18,17 @@
       </h1>
       <nav>
         {{#if loggedIn}}
+        <a href="/profile">Profile</a>
         <button id="logout-btn">Logout</button>
         {{else}}
         <a href="/signup">Login/Signup</a>
         {{/if}}
       </nav>
     </header>
-    <main>
-
-
+      <main>
         {{{body}}}
-
       </main>
     </div>
-
-   
 
 
 <script src="/javascript/login.js"></script>
