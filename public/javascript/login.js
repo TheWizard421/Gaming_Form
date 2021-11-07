@@ -1,5 +1,3 @@
-// const signupBtn = document.getElementById('signup-btn');
-
 async function loginForm(event) {
     event.preventDefault();
     const email = document.querySelector('#email-login').value.trim();
@@ -15,22 +13,13 @@ async function loginForm(event) {
             headers: { 'Content-Type': 'application/json' }
         });
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/profile');
         } else {
             alert(response.statusText);
         }
     }
 }
 
-// signupBtn.addEventListener("click", () => {
-//     console.log('button clicked');
-//     fetch('/', {
-//         method: 'get',
-//         body: JSON.stringify({
-//             page: 'signup'
-//         })
-//     })
-// })
 
 async function signupForm(event) {
     event.preventDefault();
@@ -49,7 +38,7 @@ async function signupForm(event) {
         headers: { 'Content-Type': 'application/json' }
       });
       if (response.ok) {
-        document.location.replace('/dashboard/');
+        document.location.replace('/profile');
       } else {
         alert(response.statusText);
       }
