@@ -8,7 +8,7 @@
     </div>
     <div>
       <label for="post-body">Body</label>
-      <input id="post-body" name="post-body" />
+      <textarea id="post-body" name="post-body"></textarea>
     </div>
     <button type="submit" class="btn">Create</button>
   </form>
@@ -34,7 +34,7 @@
             <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
           </div>
         </article>
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <a href="/profile/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     <br />
     {{/each}}
