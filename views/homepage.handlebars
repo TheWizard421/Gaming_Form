@@ -1,25 +1,35 @@
+<div class="box content">
+  <ul class="post-list">
+    {{#each posts as |post|}}
+      <div class="container">
 
-<ul class="post-list">
-  {{#each posts as |post|}}
-  <div class="container"> 
-    
-      <li>
-        <article class="post">
-          <div>
-            <a href="/post/{{id}}">{{post.title}}</a>
-            <p>{{post.post_body}}</p>
-          </div>
-          <div class="meta">
-            {{post.user.username}}
-            on
-            {{format_date created_at}}
-            |
-            <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-          </div>
-        </article>
-      </li>
+        <li>
+          <article class="message is-info">
+            <div class="media-content">
+              <a
+                href="/post/{{id}}"
+                class="message-header has-text-white"
+              >{{post.title}}</a>
+              <p>{{post.post_body}}</p>
+            </div>
+            <div class="tag is-success is-medium meta">
+              {{post.user.username}}
+              on
+              {{format_date created_at}}
+              |
+              <div class="media-right">
+                <a
+                  href="/post/{{post.id}}"
+                  class="tag is-link"
+                >{{post.comments.length}}
+                  comment(s)</a>
+              </div>
+            </div>
+          </article>
+        </li>
 
-    </div>
-    <br />
-  {{/each}}
-</ul>
+      </div>
+      <br />
+    {{/each}}
+  </ul>
+</div>

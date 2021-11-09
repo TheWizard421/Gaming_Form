@@ -1,38 +1,38 @@
-<article class="post">
-  <div class="title">
-    {{post.title}}
+<article class="message is-info">
+  <div class="message-header">
+    <p>{{post.title}}</p>
   </div>
-
-  <p>
+  <div class="message-body">
     {{post.post_body}}
-  </p>
+  </div>
 </article>
 
 <br />
 
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="comment-body" class="textarea"></textarea>
   </div>
   <div>
-    <button type="submit">add comment</button>
+    <button type="submit" class="button is-link">add comment</button>
   </div>
 </form>
 
-<div class="comments">
+<div class="comments message is-info">
   {{#each post.comments}}
-    <section class="comment">
-      <div class="meta">
+    <section class="comment message-body">
+      <div class="text">
+        {{comment_text}}
+      </div>
+      <div class="message-header">
         {{user.username}}
         on
         {{format_date created_at}}
-      </div>
-      <div class="text">
-        {{comment_text}}
       </div>
       <br />
     </section>
   {{/each}}
 </div>
+<br />
 
 <script src="/javascript/comment.js"></script>
