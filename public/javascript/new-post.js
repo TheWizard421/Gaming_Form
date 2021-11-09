@@ -1,4 +1,5 @@
 async function newPost(event) {
+
     event.preventDefault();
 
     const post_title = document.querySelector('input[name="post-title"]').value;

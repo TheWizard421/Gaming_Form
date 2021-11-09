@@ -11,14 +11,43 @@ html {
   color: #333;
 }
 
-.title {
+.message a:not(.button):not(.tag):not(.dropdown-item) {
   font-weight: bold;
+  text-decoration: none;
+}
+
+.tag:not(body).is-medium {
+  margin: 5px 0px 5px 0px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+
+button.button.is-link {
+  margin-top: 5px;
+}
+
+.message.is-info .message-body {
+  margin: 20px 0px 20px 0px;
+}
+
+label.label {
+  margin: 20px 0px 20px 0px;
+}
+
+div.text {
+  font-size: 20px;
+}
+div.message-body {
+  font-size: 25px;
+}
+
+.comments {
+  padding-left: 15px;
 }
 
 nav {
@@ -26,6 +55,9 @@ nav {
   display: inline;
 }
 
+li {
+  list-style: none;
+}
 
 /* form {
   float: right;
