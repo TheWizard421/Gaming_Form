@@ -1,13 +1,12 @@
 async function editPost(event) {
   event.preventDefault();
 
-  const title = document.querySelector('input[name="post-title"]').value.trim();
-  const post_body = document
-    .querySelector('textarea[name="post-body"]')
-    .value.trim();
-  const id = window.location.toString().split("/")[
-    window.location.toString().split("/").length - 1
-  ];
+    const title = document.querySelector('input[name="post-title"]').value.trim();
+    const body = document.querySelector('textarea[name="post-body"]').value.trim();
+    const id = window.location.toString().split('/')[
+        window.location.toString().split('/').length - 1
+      ];
+
 
   const response = await fetch(`/api/posts/${id}`, {
     method: "PUT",

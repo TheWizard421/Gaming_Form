@@ -77,6 +77,23 @@ router.post("/", (req, res) => {
     });
 });
 
+  // CREATE A NEW POST
+  router.post('/', (req, res) => {
+    Post.create({
+      title: req.body.post_title,
+      post_body: req.body.post_body,
+      user_id: req.session.user_id
+    })
+      .then(dbPostData => res.json(dbPostData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+
+
+
 // UPDATE AN EXISTING POST
 router.put("/:id", (req, res) => {
   Post.update(
