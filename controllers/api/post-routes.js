@@ -77,7 +77,7 @@ router.get('/:id', (req, res) => {
   // CREATE A NEW POST
   router.post('/', (req, res) => {
     Post.create({
-      title: req.body.title,
+      title: req.body.post_title,
       post_body: req.body.post_body,
       user_id: req.session.user_id
     })
@@ -89,13 +89,12 @@ router.get('/:id', (req, res) => {
   });
 
 
-
   // UPDATE AN EXISTING POST
   router.put('/:id', (req, res) => {
     Post.update(
       {
         title: req.body.title,
-        post_body: req.body.post_body
+        post_body: req.body.body
       },
       {
         where: {

@@ -6,7 +6,7 @@ async function signupForm(event) {
   const email = document.querySelector('#email-signup').value.trim();
 
   if (username && password && email) {
-      await fetch('/api/users', {
+      const response = await fetch('/api/users', {
           method: 'post',
           body: JSON.stringify({
               username,
@@ -14,7 +14,7 @@ async function signupForm(event) {
               email
           }),
           headers: { 'Content-Type': 'application/json' }
-      })
+      });
       if (response.ok) {
           console.log('success');
           document.location.replace('/profile')
