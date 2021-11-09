@@ -2,9 +2,9 @@
   <div class="title">
     {{post.title}}
   </div>
-  
+
   <p>
-      {{post.post_body}}
+    {{post.post_body}}
   </p>
 </article>
 
@@ -21,18 +21,18 @@
 
 <div class="comments">
   {{#each post.comments}}
-  <section class="comment">
-    <div class="meta">
-      {{user.username}} on {{created_at}}
-    </div>
-    <div class="text">
-      {{comment_text}}
-    </div>
-    <br>
-  </section>
+    <section class="comment">
+      <div class="meta">
+        {{user.username}}
+        on
+        {{format_date created_at}}
+      </div>
+      <div class="text">
+        {{comment_text}}
+      </div>
+      <br />
+    </section>
   {{/each}}
 </div>
 
-
 <script src="/javascript/comment.js"></script>
-
