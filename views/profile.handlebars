@@ -1,3 +1,4 @@
+<div class="container">
 <section>
   <h2 class="tag is-primary is-large">Create New Post</h2>
 
@@ -20,22 +21,22 @@
 
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
+  <h2 class="label">Your Posts</h2>
   <ul>
     {{#each posts as |post|}}
     <li>
   
-      <article class="post">
+      <article class="post message is-info">
           <div>
-            <a href="/post/{{id}}">{{post.title}}</a>
+            <a href="/post/{{id}}" class="message-header has-text-white">{{post.title}}</a>
             <p>{{post.post_body}}</p>
           </div>
-          <div class="meta">
+          <div class="tag is-success is-medium meta">
             {{post.user.username}}
             on
             {{format_date created_at}}
             |
-            <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+            <a href="/post/{{post.id}}" class="tag is-link">{{post.comments.length}} comment(s)</a>
           </div>
         </article>
       <a href="/profile/edit/{{post.id}}" class="button is-link">Edit post</a>
@@ -50,3 +51,4 @@
 
 
 <script src="/javascript/new-post.js"></script>
+</div>
