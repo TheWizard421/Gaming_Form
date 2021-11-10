@@ -1,27 +1,39 @@
-<article>
-  <a href="/profile"> &larr; Back to profile</a>
-  <h2>
-    Edit Post
-  </h2>
-  <form class="edit-post-form">
-    <div>
-      <h4>Title:</h4>
-      <input name="post-title" type="text" value="{{post.title}}" />
-    </div>
-    <div>
-      <h4>Body:</h4>
-      <textarea name="post-body" type="text">{{post.post_body}}</textarea>
-    </div>
-    <div>
-      <a href="/post/{{post.id}}">{{post.comments.length}}
-        {{format_plural "comment" post.comments.length}}</a>
-    </div>
-    <button type="submit" class="button is-link">Save post</button>
-    <button type="button" class="button is-link">Delete post</button>
-  </form>
-</article>
+<div class="container">
+  <article>
+    <a href="/profile" class="tag is-primary is-large">
+      &larr; Back to profile</a>
+    <br />
+    <h2 class="tag is-warning is-medium">
+      Edit Post
+    </h2>
+    <form class="edit-post-form">
+      <div>
+        <h4 class="label">Title:</h4>
+        <input
+          class="input"
+          name="post-title"
+          type="text"
+          value="{{post.title}}"
+        />
+      </div>
+      <div>
+        <h4 class="label">Body:</h4>
+        <textarea
+          class="textarea"
+          name="post-body"
+          type="text"
+        >{{post.post_body}}</textarea>
+      </div>
+      <div>
+        <a href="/post/{{post.id}}" class="tag is-link">{{post.comments.length}}
+          {{format_plural "comment" post.comments.length}}</a>
+      </div>
+      <button type="submit" class="button is-link">Save post</button>
+      <button type="button" class="button is-link">Delete post</button>
+    </form>
+  </article>
 
-{{! <form class="comment-form">
+  {{! <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
   </div>
@@ -31,8 +43,10 @@
   </div>
 </form> }}
 
-<script src="/javascript/edit-post.js"></script>
-<script src="/javascript/delete-post.js"></script>
+  <script src="/javascript/edit-post.js"></script>
+  <script src="/javascript/delete-post.js"></script>
 
-{{! if we end up implementing commenting on this page
+  {{! if we end up implementing commenting on this page
 <script src="/javascript/comment.js"></script> }}
+
+</div>

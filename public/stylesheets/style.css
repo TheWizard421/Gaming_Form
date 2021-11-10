@@ -20,6 +20,10 @@ html {
   margin: 5px 0px 5px 0px;
 }
 
+.tag:not(body).is-large {
+  margin: 5px 0px 5px 0px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
